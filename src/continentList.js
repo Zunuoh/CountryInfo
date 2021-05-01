@@ -25,6 +25,9 @@ const ContinentList = ({navigation}) => {
   console.log(selectedContinent);
   return (
     <View style={{ flex: 1, padding: 20 }}>
+      <View style={{paddingTop:40, justifyContent:"center", alignItems:"center"}}>
+        <Text style={{fontSize:20}}>CONTINENTS</Text>
+      </View>
       {loading ? <ActivityIndicator /> : null}
       <FlatList
         keyExtractor={(item) => {
@@ -35,7 +38,7 @@ const ContinentList = ({navigation}) => {
         renderItem={({ item }) => (
           <TouchableOpacity
             // onPress={() => setselectedContinent(item)}
-            onPress={()=>navigation.push('DetailsScreen')}
+            onPress={()=> navigation.push('CountryList')}
 
             style={{
               height: 60,
@@ -50,15 +53,16 @@ const ContinentList = ({navigation}) => {
               shadowRadius: 3.84,
               elevation: 5,
               borderRadius: 5,
+              backgroundColor:"#D0E1F9"
             }}
           >
             <Text>{item.name}</Text>
           </TouchableOpacity>
         )}
       />
-      <TouchableOpacity style={{backgroundColor:"blue", marginBottom:100, height:40}} onPress={()=>{navigation.navigate('DetailsScreen')}}>
+      {/* <TouchableOpacity style={{backgroundColor:"blue", marginBottom:100, height:40}} onPress={()=>{navigation.navigate('CountryList')}}>
           <Text>usihjn</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   );
 };

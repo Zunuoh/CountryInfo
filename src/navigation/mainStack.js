@@ -19,9 +19,9 @@ const MainStackNavigator = () =>{
             <Stack.Screen name="Signin" component={SigninScreen}/>
             <Stack.Screen name="ForgotPassword" component={ForgotPassword}/>
             <Stack.Screen name="Signup" component={SignupScreen}/>
-            {/* <Stack.Screen name="ContinentList" component={ContinentList}/>
+            <Stack.Screen name="ContinentList" component={ContinentList}/>
             <Stack.Screen name="CountryList" component={CountryList}/>
-            <Stack.Screen name="DetailsScreen" component={DetailsScreen}/> */}
+            <Stack.Screen name="DetailsScreen" component={DetailsScreen}/>
            
             </Stack.Navigator>
             </NavigationContainer>

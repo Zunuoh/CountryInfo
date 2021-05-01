@@ -20,24 +20,30 @@ query countryList{
 
 
 const CountryList = () =>{
-    const [loading, data, error] = useQuery(GET_COUNTRIES)
+    const {loading, data, error} = useQuery(GET_COUNTRIES)
     return(
         <View style={{flex:1, padding:20}}>
-            <Text>tyrdckjhvbbvnbmnnv</Text>
-        {/* {loading ? <ActivityIndicator/> : null} */}
-        {/* <FlatList
+          <View style={{justifyContent:"center", alignItems:"center", paddingTop:30}}>
+                <Text style={{fontSize:20, fontWeight:"bold"}}>COUNTRIES</Text>
+              </View>
+        {loading ? <ActivityIndicator/> : null}
+        <FlatList
         keyExtractor={(item) => {
             item.code;
           }}
           showsVerticalScrollIndicator={false}
         data={ data !== undefined ? data.countries : []}
         renderItem={({item})=>(
-            <View style={{backgroundColor:"blue", width:50, height:50}}>
-            <Text>jxkhbn </Text>
+            <View style={{marginTop:20}}>    
+            <View style={{backgroundColor:"#D0E1F9", height:70, padding:10, borderRadius:10}}>
+            <Text style={{fontSize:20, fontWeight:"bold"}}>Country:{item.name} </Text>
+            <Text>Capital:{item.capital} </Text>
+            <Text>Currency:{item.currency}</Text>
+            </View>
             </View>
         )}
          />
-        */}
+       
         </View>
         
     )
