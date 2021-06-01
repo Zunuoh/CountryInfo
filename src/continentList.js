@@ -41,9 +41,10 @@ const ContinentList = ({navigation}) => {
             onPress={()=> navigation.push('CountryList')}
 
             style={{
-              height: 60,
+              height: 90,
               backgroundColor: "#E8E8E8",
               borderWidth: 0.1,
+              borderRadius:20,
               border: 1,
               marginTop: 20,
               padding: 20,
@@ -52,11 +53,11 @@ const ContinentList = ({navigation}) => {
               shadowOpacity: 0.3,
               shadowRadius: 3.84,
               elevation: 5,
-              borderRadius: 5,
+              // borderRadius: 5,
               backgroundColor:"#D0E1F9"
             }}
           >
-            <Text>{item.name}</Text>
+            <Text style={{fontSize:20}}>{item.name}</Text>
           </TouchableOpacity>
         )}
       />

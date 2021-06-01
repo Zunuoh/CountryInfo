@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import {View, Text, TextInput} from 'react-native';
 import {Feather} from '@expo/vector-icons';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import SigninSvg from '../../components/SVGs/SigninSvg';
 
 const SigninScreen = ({navigation}) =>{
     const[username, setUsername] = useState("");
@@ -24,7 +25,10 @@ const SigninScreen = ({navigation}) =>{
     console.log(password)
     return(
         <View style={{flex:1, padding:20, backgroundColor:"#D0E1F9"}}>
-            <View style={{padding:30, paddingTop:100}}>
+           <View style={{width:150, height:150,  display:"flex",  marginTop:80, marginLeft:120}}>
+           <SigninSvg/>
+           </View> 
+            <View style={{padding:30, paddingTop:50}}>
                 <Text style={{fontSize:30, fontWeight:"bold", color:"#4D648D"}}>Sign in</Text>
             </View>
 
@@ -73,7 +77,7 @@ const SigninScreen = ({navigation}) =>{
             <View style={{justifyContent:"space-between", flexDirection:"row", paddingTop:30}}>
             <Text/>
             <TouchableOpacity onPress={()=>{navigation.navigate('ForgotPassword')}}>
-            <Text style={{fontSize:20, fontWeight:"700", color:"#4D648D"}}>Forgot password?</Text>
+            <Text style={{fontSize:20, fontWeight:"700", color:"#4D648D"}}>Forgot password</Text>
             </TouchableOpacity>
             
             </View>

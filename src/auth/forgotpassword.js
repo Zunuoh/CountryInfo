@@ -8,7 +8,7 @@ const PassOptions = [
     {item:'Username', id: 'user'}, {item:'Password', id:'pass'}
 ]
 
-const ForgotpasswordScreen = () =>{
+const ForgotpasswordScreen = ({route}) =>{
     return(
         <View style={{flex:1, padding:20}}>
         <View style={{padding:30, paddingTop:100}}>
