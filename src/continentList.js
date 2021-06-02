@@ -26,7 +26,7 @@ const ContinentList = ({navigation}) => {
   return (
     <View style={{ flex: 1, padding: 20 }}>
       <View style={{paddingTop:40, justifyContent:"center", alignItems:"center"}}>
-        <Text style={{fontSize:20}}>CONTINENTS</Text>
+        <Text style={{fontSize:20, fontWeight:"bold"}}>CONTINENTS</Text>
       </View>
       {loading ? <ActivityIndicator /> : null}
       <FlatList
@@ -36,10 +36,7 @@ const ContinentList = ({navigation}) => {
         showsVerticalScrollIndicator={false}
         data={data !== undefined ? data.continents : []}
         renderItem={({ item }) => (
-          <TouchableOpacity
-            // onPress={() => setselectedContinent(item)}
-            onPress={()=> navigation.push('CountryList')}
-
+          <View
             style={{
               height: 90,
               backgroundColor: "#E8E8E8",
@@ -58,7 +55,7 @@ const ContinentList = ({navigation}) => {
             }}
           >
             <Text style={{fontSize:20}}>{item.name}</Text>
-          </TouchableOpacity>
+          </View>
         )}
       />
       {/* <TouchableOpacity style={{backgroundColor:"blue", marginBottom:100, height:40}} onPress={()=>{navigation.navigate('CountryList')}}>

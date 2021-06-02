@@ -84,7 +84,7 @@ const SigninScreen = ({navigation}) =>{
 
           
 
-            <TouchableOpacity onPress={()=>{navigation.navigate('ContinentList')}} style={{height:50, marginTop:30, borderRadius:30, justifyContent:"center", alignItems:"center", backgroundColor:"#4D648D"}}>
+            <TouchableOpacity onPress={()=>{navigation.navigate('DetailsScreen')}} style={{height:50, marginTop:30, borderRadius:30, justifyContent:"center", alignItems:"center", backgroundColor:"#4D648D"}}>
                 <Text style={{fontWeight:"bold", fontSize:20, color:"#D0E1F9"}}>SIGN IN</Text>
             </TouchableOpacity>
 
