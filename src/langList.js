@@ -1,41 +1,25 @@
-import React from "react";
-import { Text, View, FlatList, ActivityIndicator } from "react-native";
+import React from 'react';
+import { View } from 'react-native';
 import { gql, useQuery } from "@apollo/client";
+import { useState } from 'react/cjs/react.development';
 
-const GET_COUNTRIES = gql`
-  query countryList {
-    countries {
+const GET_LANGUAGES = gql`
+query languageNames{
+    languages{
       name
       native
-      phone
-      capital
-      currency
-      emoji
-      languages {
-        name
-      }
     }
   }
-`;
 
-const CountryList = () => {
-  const { loading, data, error } = useQuery(GET_COUNTRIES);
-  return (
-    <View style={{ flex: 1, padding: 20 }}>
-      <View
-        style={{
-          justifyContent: "center",
-          alignItems: "center",
-          paddingTop: 40,
-        }}
-      >
-        <Text style={{ fontSize: 20, fontWeight: "bold", color:"#4D648D" }}>COUNTRIES</Text>
-        <View style={{paddingTop:5, paddingBottom:10}}>
-        <Text style={{fontSize:20, color:"#4D648D"}}>Ever wanted information about the countries in the world? Well we've got you!</Text>
-        </View>
-        
-      </View>
-      {loading ? <ActivityIndicator /> : null}
+`
+
+
+const LanguageList =() =>{
+    const {loading, data, error} = useQuery(GET_LANGUAGES);
+    const [selectedLanguages, setSelectedLanguages] = useState();
+    return(
+        <View>
+            {loading ? <ActivityIndicator /> : null}
       <FlatList
         keyExtractor={(item) => {
           item.code;
@@ -58,17 +42,17 @@ const CountryList = () => {
               <Text style={{ marginTop: 5, color:"#4D648D"}}>
                 The capital city of {item.name} is <Text style={{fontWeight:"bold"}}>{item.capital}</Text>.{" "}
               </Text>
-              <Text style={{ marginTop: 5, color:"#4D648D"}}>
+              {/* <Text style={{ marginTop: 5, color:"#4D648D"}}>
                 The currency they spend is <Text style={{fontWeight:"bold"}}>{item.currency}</Text> and they speak{" "}
                 <Text style={{fontWeight:"bold"}}>{item.languages.name}</Text>
-              </Text>
+              </Text> */}
             </View>
           </View>
           // console.log(item)
         )}
       />
-    </View>
-  );
-};
+        </View>
+    )
+}
 
-export default CountryList;
+export default LanguageList;

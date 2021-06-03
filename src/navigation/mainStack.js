@@ -7,6 +7,7 @@ import DetailsScreen from '../detailsScreen';
 import SigninScreen from '../auth/signin';
 import ForgotPassword from '../auth/forgotpassword';
 import SignupScreen from '../auth/signup';
+import LanguageList from '../langList';
 const Stack = createStackNavigator();
 
 const MainStackNavigator = () =>{
@@ -22,6 +23,7 @@ const MainStackNavigator = () =>{
             <Stack.Screen name="ContinentList" component={ContinentList}/>
             <Stack.Screen name="CountryList" component={CountryList}/>
             <Stack.Screen name="DetailsScreen" component={DetailsScreen}/>
+            <Stack.Screen name="LanguageScreen" component={{LanguageList}}/>
            
             </Stack.Navigator>
             </NavigationContainer>

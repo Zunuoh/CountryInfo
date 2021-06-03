@@ -7,68 +7,89 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { gql, useQuery } from "@apollo/client";
+import {Feather} from '@expo/vector-icons';
 
 const DetailsScreen = ({ navigation }) => {
   return (
     <View style={{ padding: 20, flex: 1, backgroundColor: "#D0E1F9" }}>
       <View style={{ paddingTop: 100 }}>
-        <Text style={{ fontSize: 40 }}>Hey there! </Text>
-        <Text style={{ fontSize: 30 }}>We are glad to have you here :)</Text>
+        <Text style={{ fontSize: 40 , color:"#4D648D"}}>Hey there! </Text>
+        <Text style={{ fontSize: 30, color:"#4D648D" }}>We are glad to have you here :)</Text>
       </View>
 
       <View style={{ paddingTop: 20 }}>
-        <Text style={{ fontSize: 20 }}>
+        <Text style={{ fontSize: 20, color:"#4D648D" }}>
           Select any of the buttons below for more information. Enjoy!
         </Text>
       </View>
 
-      <TouchableOpacity onPress={()=>{navigation.navigate('ContinentList')}}
-        style={{
-          height: 80,
-          backgroundColor: "#4D648D",
-          marginTop: 40,
-          width: 180,
-          marginLeft: 90,
-          borderWidth: 1,
-          borderRadius: 90,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Text style={{ fontSize: 20, fontWeight: "bold" }}>Continents</Text>
-      </TouchableOpacity>
+     <View style={{paddingTop:40, }}>
+       <View style={{flexDirection:"row", height:90, width:"90%", alignItems:"center", padding:5, justifyContent:"center", borderBottomWidth:.5, marginLeft:40, borderBottomColor:"#A9A9A9"}}>
+         <View style={{flex:8}}>
+         <Feather
+         name="globe"
+         size={64}
+         color="#4D648D"
+         />
+         </View>
+         <View style={{marginLeft:30, flex:14}}>
+            <Text style={{fontSize:30, color:"#4D648D"}}>Continents</Text>
+         </View>
+         <TouchableOpacity style={{paddingLeft:40, flex:4}} onPress={()=>{navigation.navigate('ContinentList')}}>
+           <Feather
+           name="chevron-right"
+           size={24}
+           color="#4D648D"
+           />
+         </TouchableOpacity>
+       </View>
+     </View>
 
-      <TouchableOpacity onPress={()=>{navigation.navigate('CountryList')}}
-        style={{
-          height: 80,
-          backgroundColor: "#4D648D",
-          marginTop: 40,
-          width: 180,
-          marginLeft: 90,
-          borderWidth: 1,
-          borderRadius: 90,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Text style={{ fontSize: 20, fontWeight: "bold" }}>Countries</Text>
-      </TouchableOpacity>
 
-      <TouchableOpacity
-        style={{
-          height: 80,
-          backgroundColor: "#4D648D",
-          marginTop: 40,
-          width: 180,
-          marginLeft: 90,
-          borderWidth: 1,
-          borderRadius: 90,
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Text style={{ fontSize: 20, fontWeight: "bold" }}>Languages</Text>
-      </TouchableOpacity>
+     <View style={{paddingTop:40, }}>
+       <View style={{flexDirection:"row", height:90, width:"90%", alignItems:"center", padding:5, justifyContent:"center", borderBottomWidth:.5, marginLeft:40, borderBottomColor:"#A9A9A9"}}>
+         <View  style={{flex:8}}>
+         <Feather
+         name="home"
+         size={64}
+         color="#4D648D"
+         />
+         </View>
+         <View style={{marginLeft:30, flex:14}}>
+            <Text style={{fontSize:30, color:"#4D648D"}}>Countries</Text>
+         </View>
+         <TouchableOpacity style={{paddingLeft:40, flex:4}} onPress={()=>{navigation.navigate('CountryList')}}>
+           <Feather
+           name="chevron-right"
+           size={24}
+           color="#4D648D"
+           />
+         </TouchableOpacity>
+       </View>
+     </View>
+
+
+     <View style={{paddingTop:40, }}>
+       <View style={{flexDirection:"row", height:90, width:"90%", alignItems:"center", padding:5, justifyContent:"center", borderBottomWidth:1, marginLeft:40, borderBottomColor:"#A9A9A9"}}>
+         <View style={{flex:8}}>
+         <Feather
+         name="bold"
+         size={64}
+         color="#4D648D"
+         />
+         </View>
+         <View style={{marginLeft:30, flex:14}}>
+            <Text style={{fontSize:30, color:"#4D648D"}}>Languages</Text>
+         </View>
+         <TouchableOpacity style={{paddingLeft:40, flex:4}} onPress={()=>{navigation.navigate('ContinentList')}}>
+           <Feather
+           name="chevron-right"
+           size={24}
+           color="#4D648D"
+           />
+         </TouchableOpacity>
+       </View>
+     </View>
     </View>
   );
 };
