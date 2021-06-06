@@ -24,18 +24,18 @@ const DetailsScreen = ({ navigation }) => {
       </View>
 
      <View style={{paddingTop:40, }}>
-       <View style={{flexDirection:"row", height:90, width:"90%", alignItems:"center", padding:5, justifyContent:"center", borderBottomWidth:.5, marginLeft:40, borderBottomColor:"#A9A9A9"}}>
-         <View style={{flex:8}}>
+       <View style={{flexDirection:"row", height:50, width:"90%", alignItems:"center", padding:5, justifyContent:"center", borderWidth:.5, marginLeft:20, borderColor:"#A9A9A9", borderRadius:30}}>
+         <View style={{marginRight:10}}>
          <Feather
          name="globe"
-         size={64}
+         size={34}
          color="#4D648D"
          />
          </View>
-         <View style={{marginLeft:30, flex:14}}>
-            <Text style={{fontSize:30, color:"#4D648D"}}>Continents</Text>
+         <View style={{marginRight:100}}>
+            <Text style={{fontSize:25, color:"#4D648D"}}>Continents</Text>
          </View>
-         <TouchableOpacity style={{paddingLeft:40, flex:4}} onPress={()=>{navigation.navigate('ContinentList')}}>
+         <TouchableOpacity style={{paddingLeft:50}} onPress={()=>{navigation.navigate('ContinentList')}}>
            <Feather
            name="chevron-right"
            size={24}
@@ -47,18 +47,18 @@ const DetailsScreen = ({ navigation }) => {
 
 
      <View style={{paddingTop:40, }}>
-       <View style={{flexDirection:"row", height:90, width:"90%", alignItems:"center", padding:5, justifyContent:"center", borderBottomWidth:.5, marginLeft:40, borderBottomColor:"#A9A9A9"}}>
-         <View  style={{flex:8}}>
+       <View style={{flexDirection:"row", height:50, width:"90%", alignItems:"center", padding:5, justifyContent:"center", borderWidth:.5, marginLeft:20, borderColor:"#A9A9A9", borderRadius:30}}>
+         <View  style={{marginLeft:10}}>
          <Feather
          name="home"
-         size={64}
+         size={34}
          color="#4D648D"
          />
          </View>
-         <View style={{marginLeft:30, flex:14}}>
-            <Text style={{fontSize:30, color:"#4D648D"}}>Countries</Text>
+         <View style={{marginLeft:10}}>
+            <Text style={{fontSize:25, color:"#4D648D"}}>Countries</Text>
          </View>
-         <TouchableOpacity style={{paddingLeft:40, flex:4}} onPress={()=>{navigation.navigate('CountryList')}}>
+         <TouchableOpacity style={{paddingLeft:160, flex:4}} onPress={()=>{navigation.navigate('CountryList')}}>
            <Feather
            name="chevron-right"
            size={24}
@@ -70,18 +70,18 @@ const DetailsScreen = ({ navigation }) => {
 
 
      <View style={{paddingTop:40, }}>
-       <View style={{flexDirection:"row", height:90, width:"90%", alignItems:"center", padding:5, justifyContent:"center", borderBottomWidth:1, marginLeft:40, borderBottomColor:"#A9A9A9"}}>
-         <View style={{flex:8}}>
+       <View style={{flexDirection:"row", height:50, width:"90%", alignItems:"center", padding:5, justifyContent:"center", borderWidth:1, marginLeft:20, borderColor:"#A9A9A9", borderRadius:30}}>
+         <View style={{marginRight:10}}>
          <Feather
          name="bold"
-         size={64}
+         size={34}
          color="#4D648D"
          />
          </View>
-         <View style={{marginLeft:30, flex:14}}>
-            <Text style={{fontSize:30, color:"#4D648D"}}>Languages</Text>
+         <View style={{marginRight:100}}>
+            <Text style={{fontSize:25, color:"#4D648D"}}>Languages</Text>
          </View>
-         <TouchableOpacity style={{paddingLeft:40, flex:4}} onPress={()=>{navigation.navigate('ContinentList')}}>
+         <TouchableOpacity style={{paddingLeft:60, flex:4}} onPress={()=>{navigation.navigate('LanguageList')}}>
            <Feather
            name="chevron-right"
            size={24}

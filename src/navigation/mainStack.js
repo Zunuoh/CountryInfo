@@ -23,7 +23,7 @@ const MainStackNavigator = () =>{
             <Stack.Screen name="ContinentList" component={ContinentList}/>
             <Stack.Screen name="CountryList" component={CountryList}/>
             <Stack.Screen name="DetailsScreen" component={DetailsScreen}/>
-            <Stack.Screen name="LanguageScreen" component={{LanguageList}}/>
+            <Stack.Screen name="LanguageList" component={LanguageList}/>
            
             </Stack.Navigator>
             </NavigationContainer>
